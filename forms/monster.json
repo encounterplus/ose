@@ -1,0 +1,184 @@
+{
+  "title": "Monster",
+  "sections": [
+    {
+      "title": "Common.ShortDescription",
+      "type": "group",
+      "fields": [
+        {
+          "type": "textArea",
+          "attribute": "data.shortDescription"
+        }
+      ]
+    },
+    {
+      "title": "Common.Armour",
+      "type": "group",
+      "fields": [
+        {
+          "title": "Common.ArmourClass",
+          "type": "number",
+          "attribute": "data.ac"
+        },
+        {
+          "title": "Common.AscendingArmourClass",
+          "type": "number",
+          "attribute": "data.aac"
+        },
+      ]
+    },
+    {
+      "title": "Common.HitPoints",
+      "type": "group",
+      "fields": [
+        {
+          "title": "Common.HitDice",
+          "type": "text",
+          "attribute": "data.hd.value"
+        },
+        {
+          "title": "HitDice.Modifier",
+          "type": "number",
+          "attribute": "data.hd.mod"
+        },
+        {
+          "title": "HitDice.AverageHitPoints",
+          "type": "number",
+          "placeholder": "Common.Default",
+          "attribute": "data.hd.average"
+        },
+        {
+          "title": "HitDice.SpecialAbilities",
+          "type": "number",
+          "attribute": "data.hd.special"
+        },
+      ],
+    },
+    {
+      "title": "Monster.Attacks",
+      "type": "group",
+      "fields": [
+        {
+          "placeholder": "Monster.AttacksUsablePerRound",
+          "type": "textArea",
+          "attribute": "data.attacks"
+        },
+        {
+          "title": "Common.THAC0",
+          "type": "text",
+          "attribute": "data.thac0"
+        },
+        {
+          "title": "Common.AttackBonus",
+          "type": "text",
+          "attribute": "data.attackBonus"
+        },
+      ]
+    },
+    {
+      "title": "Monster.SavingThrows",
+      "type": "group",
+      "fields": [
+        {
+          "title": "Saves.Death",
+          "type": "number",
+          "attribute": "data.saves.death"
+        },
+        {
+          "title": "Saves.Wands",
+          "type": "number",
+          "attribute": "data.saves.wands"
+        },
+        {
+          "title": "Saves.Paralysis",
+          "type": "number",
+          "attribute": "data.saves.paralysis"
+        },
+        {
+          "title": "Saves.Breath",
+          "type": "number",
+          "attribute": "data.saves.breath"
+        },
+        {
+          "title": "Saves.Spells",
+          "type": "number",
+          "attribute": "data.saves.spells"
+        },
+        {
+          "title": "Saves.SaveAsHD",
+          "type": "number",
+          "attribute": "data.saves.hd"
+        },
+      ]
+    },
+    {
+      "title": "Common.Other",
+      "type": "group",
+      "fields": [
+        
+        {
+          "title": "Common.Movement",
+          "type": "text",
+          "attribute": "data.movement"
+        },
+        {
+          "title": "Monster.MoraleRating",
+          "type": "text",
+          "attribute": "data.ml"
+        },
+        {
+          "title": "Common.Alignment",
+          "type": "picker",
+          "attribute": "data.alignment",
+          "attributeType": "Alignment"
+        },
+        {
+          "title": "Monster.ExperienceAward",
+          "type": "number",
+          "attribute": "data.xp"
+        },
+        {
+          "title": "Monster.NumberAppearing",
+          "type": "text",
+          "attribute": "data.na"
+        },
+        {
+          "title": "Monster.TreasureType",
+          "type": "text",
+          "attribute": "data.tt"
+        },
+      ]
+    },
+
+    {
+      "title": "Monster.Features",
+      "type": "list",
+      "attribute": "data.features",
+      "form": {
+        "title": "Monster.Feature",
+        "sections": [
+          {
+            "type": "group",
+            "fields": [
+              {
+                "placeholder": "Common.Name",
+                "attribute": "name"
+              }
+            ]
+          },
+          {
+            "title": "Common.Description",
+            "type": "group",
+            "fields": [
+              {
+                "title": "Common.Description",
+                "type": "textArea",
+                "attribute": "text"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "debug": false,
+  "spacing": 12,
+  "padding": [
+    20,
+    20,
+    20,
+    20
+  ],
+  "footer": true,
+  "images": true,
+  "views": [
+    {
+      "value": "{{name}}",
+      "style": "title2",
+      "width": 0,
+      "bgColor": "#dbe8d4",
+      "padding": [6],
+      "link": "https://www.google.com/search?tbm=isch&q=ose+{{name}}"
+    },
+    {
+      "value": "{{data.shortDescription}}",
+      "type": "text",
+      "style": "subtitle",
+    },
+    {
+      "type": "text",
+      "value": "{% include \"item.md\" %}",
+    },
+    {
+      "type": "text",
+      "value": "{{descr}}",
+    },
+    {
+      "type": "text",
+      "title": "Common.Notes",
+      "value": "{{notes}}",
+    },
+    {
+      "type": "image",
+      "value": "{{image}}",
+      "link": "{{image}}"
+    },
+    {
+      "type": "text",
+      "value": "{{footer}}"
+    }, 
+    {
+      "type": "tags",
+      "attribute": "tags"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "sections": [
+    {
+      "type": "group",
+      "fields": [
+        {
+          "placeholder": "Name",
+          "attribute": "name"
+        }
+      ]
+    },
+    {
+      "title": "Description",
+      "type": "group",
+      "fields": [
+        {
+          "title": "Description",
+          "type": "textArea",
+          "attribute": "descr"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "fields": [
+        {
+          "title": "Equipped",
+          "type": "toggle",
+          "attribute": "active",
+        },
+        {
+          "title": "Quantity",
+          "placeholder": "1",
+          "type": "number",
+          "attribute": "quantity",
+        },
+        {
+          "title": "Charges",
+          "type": "number",
+          "attribute": "charges",
+        },
+      ]
+    },
+    {
+      "type": "group",
+      "fields": [
+        {
+          "title": "Container",
+          "type": "toggle",
+          "attribute": "container",
+        },
+        {
+          "title": "Ignore Weight",
+          "type": "toggle",
+          "attribute": "ignoreWeight",
+        },
+      ]
+    },
+    {
+      "title": "Items",
+      "type": "list",
+      "attribute": "data.items",
+      "attributeType": "Item",
+      "custom": {
+        "transform": "tree",
+        "map": {
+          "container": "data.container"
+        }
+      },
+      "form": {
+        "title": "Character.Item",
+        "partial": "character-item"
+      },
+      "visibleIf": "{{container}}"
+    },
+    {
+      "type": "group",
+      "title": "Reference",
+      "fields": [
+        {
+          "title": "Reference",
+          "type": "reference",
+          "attribute": "reference",
+          "attributeType": "Item"
+        },
+      ]
+    },
+  ]
+}

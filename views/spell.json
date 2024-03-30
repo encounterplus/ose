@@ -1,0 +1,60 @@
+{
+  "debug": false,
+  "spacing": 12,
+  "padding": [
+    20,
+    20,
+    20,
+    20
+  ],
+  "footer": true,
+  "images": true,
+  "views": [
+    {
+      "value": "{{name}}",
+      "style": "title2",
+      "width": 0,
+      "bgColor": "#dbe8d4",
+      "padding": [6],
+      "link": "https://www.google.com/search?tbm=isch&q=ose+{{name}}"
+    },
+    {
+      "value": "{{data.level|default: 1|ordinal}} {{'Spell.Level'|l}}, {{data.classes | join: ', '}}",
+      "style": "subtitle",
+    },
+    {
+      "type": "divider",
+      "padding": [0]
+    },
+    {
+      "type": "text",
+      "value": "{% if data.duration %}**{{'Spell.Duration'|l}}:** {{data.duration}} {% endif %}\n{% if data.range %}**{{'Spell.Range'|l}}:** {{data.range}} {% endif %}",
+    },
+    {
+      "type": "divider",
+      "padding": [0]
+    },
+    {
+      "type": "text",
+      "value": "{{descr}}",
+    },
+    {
+      "type": "text",
+      "title": "Common.Notes",
+      "value": "{{notes}}",
+    },
+    {
+      "type": "image",
+      "value": "{{image}}",
+      "link": "{{image}}"
+    },
+    {
+      "type": "text",
+      "value": "{{footer}}"
+    }, 
+    {
+      "type": "tags",
+      "attribute": "tags"
+    }
+  ]
+}

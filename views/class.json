@@ -1,0 +1,56 @@
+{
+  "debug": false,
+  "spacing": 12,
+  "padding": [
+    20,
+    20,
+    20,
+    20
+  ],
+  "footer": false,
+  "images": true,
+  "views": [
+    {
+      "value": "{{name}}",
+      "style": "title3",
+    },
+    {
+      "type": "text",
+      "value": "{% include \"class.md\" %}",
+      "width": 0,
+      "bgColor": "#dbe8d4",
+      "padding": [8],
+    },
+    {
+      "value": "{{data.shortDescription}}",
+      "type": "text",
+      "style": "subtitle"
+    },
+    {
+      "value": "{% for ability in data.abilities %}## {{ability.name}}\n\n{{ability.text}}\n\n{% endfor %}",
+      "type": "text",
+    },
+    {
+      "type": "text",
+      "value": "{{descr}}"
+    },
+    {
+      "type": "text",
+      "title": "Common.Notes",
+      "value": "{{notes}}",
+    },
+    {
+      "type": "image",
+      "value": "{{image}}",
+      "link": "{{image}}"
+    },
+    {
+      "type": "text",
+      "value": "{{footer}}"
+    }, 
+    {
+      "type": "tags",
+      "attribute": "tags"
+    }
+  ]
+}

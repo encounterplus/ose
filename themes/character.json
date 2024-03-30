@@ -1,0 +1,145 @@
+{
+  "debug": false,
+  "extends": "Default",
+  "tintColor": "#dbe8d4",
+  "primaryColor": "#ffffff",
+  "textColor": "#ffffff",
+  "dividerColor": "#cccccc",
+  "bgColor": "#000000",
+  "bgImage": "/images/dark.jpg",
+  "tableStyles": {
+    "default": {
+      "rowStyle": "underline",
+      "rowColor": "#000000",
+    }
+  },
+  "fieldStyles": {
+    "default": {
+      "layout": "leading",
+      "spacing": 0,
+      "padding": [0],
+      "alignment": "center",
+      "borderColor": "#ffffff",
+      "borderWidth": 1,
+      "titleWidth": 60,
+      "title": {
+        "font": "Futura Condensed Bold",
+        "size": 16,
+        "alignment": "center",
+        "case": "uppercase",
+        "padding": [6],
+        "color":"#000000",
+        "bgColor": "#ffffff",
+      },
+      "body": {
+        "font": "LinLibertine",
+        "size": 18,
+        "alignment": "center",
+        "padding": [8],
+      }
+    },
+    "small": {
+      "layout": "leading",
+      "spacing": 0,
+      "padding": [0],
+      "alignment": "leading",
+      "borderColor": "#ffffff",
+      "borderWidth": 1,
+      "titleWidth": 40,
+      "title": {
+        "font": "Futura Condensed Bold",
+        "size": 14,
+        "alignment": "center",
+        "case": "uppercase",
+        "padding": [6],
+        "color":"#000000",
+        "bgColor": "#ffffff",
+      },
+      "body": {
+        "font": "LinLibertine",
+        "size": 18,
+        "alignment": "center",
+        "padding": [8],
+      }
+    },
+    "mini": {
+      "layout": "bottom",
+      "spacing": 2,
+      "padding": [6],
+      "alignment": "center",
+      "borderColor": "#ffffff",
+      "borderWidth": 1,
+      "title": {
+        "font": "Futura Condensed Bold",
+        "size": 9,
+        // "alignment": "center",
+        "case": "uppercase",
+        "padding": [0],
+        "color":"#cccccc",
+        // "bgColor": "#009A23"
+      },
+      "body": {
+        "font": "LinLibertine",
+        "size": 18,
+        // "alignment": "center",
+        "padding": [0, 4],
+      }
+    }
+  },
+  "buttonStyles": {
+    "default": {
+      "color": "#ffffff",
+      "bgColor": "#222222",
+      "cornerRadius": 0,
+      "body": {
+        "font": "Futura Condensed Bold",
+        "color": "#000000",
+        "case": "uppercase",
+        "size": 16
+      }
+    },
+    "prominent": {
+      "color": "#222222",
+      "bgColor": "#ffffff",
+      "cornerRadius": 0,
+      "body": {
+        "font": "Futura Condensed Bold",
+        "color": "#000000",
+        "case": "uppercase",
+        "size": 16
+      }
+    }
+  },
+  "textStyles": {
+    "label": {
+      "font": "Futura Condensed Bold",
+      "color": "#cccccc",
+      "size": 16,
+    },
+    "title": {
+      "font": "Council Regular",
+      "color": "#ffffff",
+      "size": 50,
+    },
+    "title2": {
+      "font": "Council Regular",
+      "color": "#ffffff",
+      "size": 32
+    },
+    "title3": {
+      "font": "Futura Condensed Bold",
+      "color": "#ffffff",
+      "size": 24
+    },
+    "item-title": {
+      "font": "Futura Condensed Bold",
+      "color": "#ffffff",
+      "size": 20,
+    },
+    "item-detail": {
+      "font": "LinLibertine",
+      "color": "#f5f5f5",
+      "size": 18,
+    },
+  }
+}

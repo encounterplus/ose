@@ -1,0 +1,74 @@
+{
+  "views": [
+    {
+      "type": "hStack",
+      "alignment": "center",
+      "spacing": 6,
+      "views": [
+        {
+          "type": "image",
+          "value": "{{definition.imagePath}}",
+          "imageResizeMode": "aspectFill",
+          "cornerRadius": 6,
+          "width": 34,
+          "height": 34,
+        },
+        {
+          "type": "image",
+          "value": "{% if definition.imagePath == nil %}/icons/attack/{{attackType}}.png{% endif %}",
+          "imageResizeMode": "aspectFill",
+          "cornerRadius": 6,
+          "width": 34,
+          "height": 34,
+          "color": "#999",
+          "custom": {
+            "renderingMode": "template"
+          }
+        },
+        {
+          "type": "vStack",
+          "spacing": 1,
+          "link": "{{reference}}",
+          "views": [
+            {
+              "value": "**{{name}}**",
+              "style": "item-title"
+            },
+            {
+              "type": "text",
+              "style": "item-detail",
+              "value": "{{text}}"
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "style": "mini",
+          "title": "attack",
+          "value": "{{attack|diceFormula|signed}}",
+          "context": "mixed",
+          "width": -1,
+          "link": "/roll/{{attack|formula|signed}}/{{name}}/attack",
+        },
+        {
+          "type": "field",
+          "style": "mini",
+          "title": "damage",
+          "value": "{{damage|diceFormula}}",
+          "context": "mixed",
+          "width": -1,
+          "link": "/roll/{{damage|formula}}/{{name}}/damage",
+        },
+        {
+          "type": "field",
+          "style": "mini",
+          "title": "custom",
+          "value": "{{expression|diceFormula}}",
+          "context": "mixed",
+          "width": -1,
+          "link": "/roll/{{expression|formula}}/{{name}}",
+        },
+      ]
+    },
+  ]
+}

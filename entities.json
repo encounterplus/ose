@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Character",
+    "label": "character",
+    "collection": {
+      "label": "characters"
+    },
+    "loadable": true,
+    "role": "friendly"
+  },
+  {
+    "name": "Monster",
+    "label": "monster",
+    "collection": {
+      "label": "monsters"
+    },
+    "loadable": true
+  },
+  {
+    "name": "NPC",
+    "label": "npc",
+    "extends": "Monster",
+    "collection": {
+      "label": "npcs"
+    },
+    "loadable": true,
+    "role": "neutral"
+  },
+  {
+    "name": "Spell",
+    "label": "spell",
+    "collection": {
+      "label": "spells"
+    },
+    "loadable": true
+  },
+  {
+    "name": "Item",
+    "label": "item",
+    "collection": {
+      "label": "items"
+    },
+    "loadable": true,
+    "role": "neutral"
+  },
+  {
+    "name": "Class",
+    "label": "class",
+    "collection": {
+      "label": "classes"
+    }
+  },
+  {
+    "name": "Table",
+    "label": "table",
+    "collection": {
+      "label": "tables"
+    },
+    "native": true
+  }
+]

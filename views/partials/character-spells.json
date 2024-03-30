@@ -1,0 +1,84 @@
+{
+  "views": [
+    {
+      "style": "title2",
+      "value": "Spellcasting",
+    },
+    {
+      "type": "list",
+      "attribute": "data.spellbook",
+      "views": [
+        {
+          "type": "hStack",
+          "alignment": "center",
+          "spacing": 3,
+          "views": [
+            {
+              "value": "{{level|ordinal}} {{'Spell.Level'|l}}",
+              "style": "title3",
+            },
+            {
+              "value": "SLOTS",
+              "style": "label",
+              "width": -1,
+            },
+            {
+              "type": "checkboxGroup",
+              "attribute": "spellSlots.used",
+              "custom": {
+                "range": {
+                  "max": "spellSlots.available"
+                },
+              },
+              "action": {
+                "attribute": "data.spellSlots.{{level}}.used"
+              }
+            },
+          ]
+        },
+        {
+          "type": "hStack",
+          "alignment": "leading",
+          "spacing": 2,
+          "views": [
+            {
+              "value": "SPELL",
+              "style": "label",
+            },
+            {
+              "value": "PREP",
+              "style": "label",
+              "alignment": "center",
+              "width": 50,
+            },
+            {
+              "value": "ACTION",
+              "style": "label",
+              "alignment": "center",
+              "width": 60,
+            },
+          ]
+        },
+        {
+          "type": "divider",
+          "padding": [0],
+        },
+        {
+          "type": "list",
+          "attribute": "spells",
+          "divider": true,
+          "views": [
+            {
+              "type": "partial",
+              "value": "character-spell",
+            }
+          ]
+        },
+        {
+          "value": "No spells available",
+          "hiddenIf": "{{spells.first}}"
+        }
+      ]
+    },
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "ose",
+  "name": "Old-School Essentials",
+  "type": "system",
+  "version": "0.9.0",
+  "description": "A role-playing game of fantastic adventure, where players work together to overcome fearsome monsters, sinister plots, and deadly traps in search of wealth, power, and glory.",
+  "download": "https://github.com/encounterplus/ose/releases/download/0.9.0/ose.system"
+}

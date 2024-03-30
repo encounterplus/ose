@@ -1,0 +1,83 @@
+{
+  "title": "Class",
+  "sections": [
+    {
+      "title": "Common.ShortDescription",
+      "type": "group",
+      "fields": [
+        {
+          "type": "textArea",
+          "attribute": "data.shortDescription"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "fields": [
+        {
+          "title": "Class.Requirements",
+          "attribute": "data.requirements"
+        }, 
+        {
+          "title": "Class.PrimeRequisite",
+          "attribute": "data.primeRequisite"
+        },
+        {
+          "title": "Class.HitDice",
+          "type": "picker",
+          "attribute": "data.hd",
+          "attributeType": "HitDie"
+        },
+        {
+          "title": "Class.MaximumLevel",
+          "type": "number",
+          "attribute": "data.maximumLevel"
+        },
+        {
+          "title": "Common.Armour",
+          "attribute": "data.armour"
+        },
+        {
+          "title": "Cleric.Weapons",
+          "attribute": "data.weapons"
+        },
+        {
+          "title": "Class.Languages",
+          "type": "multiPicker",
+          "attribute": "data.languages",
+          "attributeType": "Language"
+        }
+      ]
+    },
+    {
+      "title": "Class.Abilities",
+      "type": "list",
+      "attribute": "data.abilities",
+      "form": {
+        "title": "Class.Ability",
+        "sections": [
+          {
+            "type": "group",
+            "fields": [
+              {
+                "placeholder": "Common.Name",
+                "attribute": "name"
+              }
+            ]
+          },
+          {
+            "title": "Common.Description",
+            "type": "group",
+            "fields": [
+              {
+                "title": "Common.Description",
+                "type": "textArea",
+                "attribute": "text"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

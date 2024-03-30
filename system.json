@@ -1,0 +1,13 @@
+{
+  "author" : "Necrotic Gnome",
+  "banner" : "ose-banner-unofficial.jpg",
+  "descr" : "A role-playing game of fantastic adventure, where players work together to overcome fearsome monsters, sinister plots, and deadly traps in search of wealth, power, and glory.",
+  "id" : "ose",
+  "name" : "Old-School Essentials",
+  "package" : "https:\/\/github.com\/encounterplus\/ose\/releases\/latest\/download\/ose.json",
+  "repository" : "https:\/\/github.com\/encounterplus\/ose",
+  "shortDescr" : "Award-winning role-playing game of fantastic adventure, monsters, and magic.",
+  "shortName" : "OSE",
+  "version" : "0.9.0",
+  "website" : "https:\/\/necroticgnome.com\/pages\/about-old-school-essentials"
+}

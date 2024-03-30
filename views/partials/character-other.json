@@ -1,0 +1,20 @@
+{
+  "views": [
+    {
+      "value": "Description",
+      "style": "title2",
+    },
+    {
+      "type": "text",
+      "value": "{{descr|default: '-'}}",
+    },
+    {
+      "value": "Notes",
+      "style": "title2",
+    },
+    {
+      "type": "text",
+      "value": "{{notes|default: '-'}}",
+    }
+  ],
+}

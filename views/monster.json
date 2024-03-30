@@ -1,0 +1,75 @@
+{
+  "debug": false,
+  "spacing": 12,
+  "padding": [
+    20,
+    20,
+    20,
+    20
+  ],
+  "footer": true,
+  "images": true,
+  "views": [
+    {
+      "value": "{{name}}",
+      "style": "title2",
+      "width": 0,
+      "bgColor": "#dbe8d4",
+      "padding": [6],
+      "link": "https://www.google.com/search?tbm=isch&q=ose+{{name}}"
+    },
+    {
+      "value": "{{data.shortDescription}}",
+      "type": "text",
+      "style": "subtitle"
+    },
+    {
+      "type": "divider",
+      "padding": [0]
+    },
+    {
+      "type": "text",
+      "value": "{% include \"monster.md\" %}",
+    },
+    {
+      "type": "divider",
+      "padding": [0]
+    },
+    {
+      "type": "text",
+      "value": "{% for feature in data.features %}▶ **{{feature.name}}:** {{feature.text}}\n\n{% endfor %}",
+    },
+    {
+      "type": "text",
+      "value": "{{descr}}",
+    },
+    {
+      "type": "text",
+      "title": "Common.Notes",
+      "value": "{{notes}}",
+    },
+    {
+      "type": "image",
+      "value": "{{image}}",
+      "link": "{{image}}"
+    },
+    {
+      "type": "text",
+      "value": "{{footer}}"
+    }, 
+    {
+      "type": "tags",
+      "attribute": "tags"
+    }
+  ],
+  "attributes": [
+    {
+      "inCombatDetail": "{{'Common.AC'|l}} {{data.ac}} • {{'Common.HD'|l}} {{data.hd.value}}",
+      "outCombatDetail": "{{'Common.AC'|l}} {{data.ac}} • {{'Common.HD'|l}} {{data.hd.value}}",
+      "data.hd.formula": "{{data.hd.value}}d8{{data.hd.mod|signed}}"
+    }, 
+    {
+      "data.hp": "{% if data.hd.average %}{{data.hd.average}} {{data.hd.formula|brackets}}{% else %}{{data.hd.formula}}{% endif %}"
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "title": "Character",
+  "tabs": [
+    // MAIN
+    {
+      "title": "Main",
+      "icon": "person",
+      "sections": [
+        {
+          "type": "group",
+          "fields": [
+            {
+              "title": "Character.Class",
+              "type": "multiPicker",
+              "attribute": "data.classes",
+              "attributeType": "Class"
+            },
+            {
+              "title": "Character.Title",
+              "type": "text",
+              "attribute": "data.title"
+            },
+            {
+              "title": "Character.Alignment",
+              "type": "picker",
+              "attribute": "data.alignment",
+              "attributeType": "Alignment"
+            },
+            {
+              "title": "Common.Level",
+              "type": "number",
+              "attribute": "data.level"
+            },
+            {
+              "title": "Common.Experience",
+              "type": "number",
+              "attribute": "data.xp"
+            },
+            {
+              "title": "Character.Languages",
+              "type": "multiPicker",
+              "attribute": "data.languages",
+              "attributeType": "Language"
+            },
+          ]
+        },
+        {
+          "title": "Character.AbilityScores",
+          "type": "group",
+          "fields": [
+            {
+              "title": "Ability.Strength",
+              "type": "form",
+              "text": "{{data.str.base}} ({{data.str.mod|signed}})",
+              "attribute": "data.str",
+              "form": {
+                "title": "Ability.Strength",
+                "partial": "ability"
+              }
+            },
+            {
+              "title": "Ability.Dexterity",
+              "type": "form",
+              "text": "{{data.dex.base}} ({{data.dex.mod|signed}})",
+              "attribute": "data.dex",
+              "form": {
+                "title": "Ability.DEX",
+                "partial": "ability"
+              }
+            },
+            {
+              "title": "Ability.Constitution",
+              "type": "form",
+              "text": "{{data.con.base}} ({{data.con.mod|signed}})",
+              "attribute": "data.con",
+              "form": {
+                "title": "Stat.Constitution",
+                "partial": "ability"
+              }
+            },
+            {
+              "title": "Ability.Intelligence",
+              "type": "form",
+              "text": "{{data.int.base}} ({{data.int.mod|signed}})",
+              "attribute": "data.int",
+              "form": {
+                "title": "Ability.Intelligence",
+                "partial": "ability"
+              }
+            },
+            {
+              "title": "Ability.Wisdom",
+              "type": "form",
+              "text": "{{data.wis.base}} ({{data.wis.mod|signed}})",
+              "attribute": "data.wis",
+              "form": {
+                "title": "Ability.Wisdom",
+                "partial": "ability"
+              }
+            },
+            {
+              "title": "Ability.Charisma",
+              "type": "form",
+              "text": "{{data.cha.base}} ({{data.cha.mod|signed}})",
+              "attribute": "data.cha",
+              "form": {
+                "title": "Ability.Charisma",
+                "partial": "ability"
+              }
+            },
+          ]
+        },
+        {
+          "title": "Character.SavingThrows",
+          "type": "group",
+          "fields": [
+            {
+              "title": "Saves.Death",
+              "type": "number",
+              "attribute": "data.saves.death"
+            },
+            {
+              "title": "Saves.Wands",
+              "type": "number",
+              "attribute": "data.saves.wands"
+            },
+            {
+              "title": "Saves.Paralysis",
+              "type": "number",
+              "attribute": "data.saves.paralysis"
+            },
+            {
+              "title": "Saves.Breath",
+              "type": "number",
+              "attribute": "data.saves.breath"
+            },
+            {
+              "title": "Saves.Spells",
+              "type": "number",
+              "attribute": "data.saves.spells"
+            }
+          ]
+        },
+        {
+          "title": "Common.Health",
+          "type": "group",
+          "fields": [
+            {
+              "title": "Common.CurrentHP",
+              "type": "number",
+              "attribute": "data.hpCurrent"
+            },
+            {
+              "title": "Common.MaximumHP",
+              "type": "number",
+              "attribute": "data.hpMaximum"
+            }
+          ]
+        },
+        {
+          "title": "Character.Combat",
+          "type": "group",
+          "fields": [
+            {
+              "title": "Common.ArmourClass",
+              "type": "number",
+              "attribute": "data.ac"
+            },
+            {
+              "title": "Character.AttackBonus",
+              "type": "number",
+              "attribute": "data.attackBonus"
+            },
+            {
+              "title": "Common.InitiativeBonus",
+              "type": "number",
+              "attribute": "data.initiativeBonus"
+            },
+          ]
+        },
+        {
+          "title": "Character.Exploration",
+          "type": "group",
+          "fields": [
+            {
+              "title": "Character.ListenAtDoor",
+              "type": "number",
+              "attribute": "data.exploration.ld"
+            },
+            {
+              "title": "Character.OpenStuckDoor",
+              "type": "number",
+              "attribute": "data.exploration.od"
+            },
+            {
+              "title": "Character.FindSecretDoor",
+              "type": "number",
+              "attribute": "data.exploration.sd"
+            },
+            {
+              "title": "Character.FindRoomTrap",
+              "type": "number",
+              "attribute": "data.exploration.ft"
+            },
+          ]
+        },
+        {
+          "title": "Character.Movement",
+          "type": "group",
+          "fields": [
+            {
+              "title": "Movement.Overland",
+              "type": "number",
+              "attribute": "data.movement.ov"
+            },
+            {
+              "title": "Movement.Exploration",
+              "type": "number",
+              "attribute": "data.movement.ex"
+            },
+            {
+              "title": "Movement.Encounters",
+              "type": "number",
+              "attribute": "data.movement.en"
+            },
+          ]
+        },
+        {
+          "title": "Character.Abilities",
+          "type": "list",
+          "attribute": "data.abilities",
+          "form": {
+            "title": "Common.Ability",
+            "sections": [
+              {
+                "type": "group",
+                "fields": [
+                  {
+                    "placeholder": "Common.Name",
+                    "attribute": "name"
+                  },
+                ]
+              },
+              {
+                "title": "Common.Description",
+                "type": "group",
+                "fields": [
+                  {
+                    "title": "Common.Description",
+                    "type": "textArea",
+                    "attribute": "text"
+                  }
+                ]
+              },
+              {
+                "title": "CharacterAbility.Attack",
+                "type": "group",
+                "fields": [
+                  {
+                    "title": "Common.DiceExpression",
+                    "type": "textArea",
+                    "attribute": "attack"
+                  }
+                ]
+              },
+              {
+                "title": "CharacterAbility.Damage",
+                "type": "group",
+                "fields": [
+                  {
+                    "title": "Common.DiceExpression",
+                    "type": "textArea",
+                    "attribute": "damage"
+                  }
+                ]
+              },
+              {
+                "title": "CharacterAbility.Custom",
+                "type": "group",
+                "fields": [
+                  {
+                    "title": "Common.DiceExpression",
+                    "type": "textArea",
+                    "attribute": "expression"
+                  }
+                ]
+              },
+              {
+                "type": "group",
+                "title": "Reference",
+                "fields": [
+                  {
+                    "title": "Reference",
+                    "type": "reference",
+                    "attribute": "reference",
+                  },
+                ]
+              },
+            ]
+          }
+        },
+      ]
+    },
+    // ITEMS
+    {
+      "title": "Items",
+      "icon": "archivebox",
+      "sections": [
+        {
+          "type": "group",
+          "title": "Coins",
+          "fields": [
+            {
+              "type": "hStack",
+              "fields": [
+                {
+                  "title": "Copper",
+                  "placeholder": "—",
+                  "type": "number",
+                  "alignment": "top",
+                  "attribute": "data.coins.cp",
+                },
+                {
+                  "title": "Silver",
+                  "placeholder": "—",
+                  "type": "number",
+                  "alignment": "top",
+                  "attribute": "data.coins.sp",
+                },
+                {
+                  "title": "Electrum",
+                  "placeholder": "—",
+                  "type": "number",
+                  "alignment": "top",
+                  "attribute": "data.coins.ep",
+                },
+                {
+                  "title": "Gold",
+                  "placeholder": "—",
+                  "type": "number",
+                  "alignment": "top",
+                  "attribute": "data.coins.gp",
+                },
+                {
+                  "title": "Platinum",
+                  "placeholder": "—",
+                  "type": "number",
+                  "alignment": "top",
+                  "attribute": "data.coins.pp",
+                },
+              ]
+            },
+          ]
+        },
+        {
+          "title": "Character.Equipment",
+          "type": "list",
+          "attribute": "data.items",
+          "attributeType": "Item",
+          "custom": {
+            "transform": "tree",
+            "map": {
+              "container": "data.container"
+            }
+          },
+          "form": {
+            "title": "Character.Item",
+            "partial": "character-item"
+          }
+        },
+      ]
+    },
+    // SPELLS
+    {
+      "title": "Spells",
+      "icon": "bolt",
+      "sections": [
+        {
+          "type": "group",
+          "title": "Spell Slots",
+          "fields": [
+            {
+              "type": "hStack",
+              "fields": [
+                {
+                  "title": "1st",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.1.available"
+                },
+                {
+                  "title": "2nd",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.2.available"
+                },
+                {
+                  "title": "3rd",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.3.available"
+                },
+                {
+                  "title": "4th",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.4.available"
+                },
+                {
+                  "title": "5th",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.5.available"
+                },
+                {
+                  "title": "6th",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.6.available"
+                },
+                {
+                  "title": "7th",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.7.available"
+                },
+                {
+                  "title": "8th",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "data.spellSlots.8.available"
+                },
+                {
+                  "title": "9th",
+                  "placeholder": "—",
+                  "alignment": "top",
+                  "type": "number",
+                  "attribute": "sdata.spellSlots.9.available"
+                }
+              ]
+            },
+          ]
+        },
+        {
+          "title": "Character.Spells",
+          "type": "list",
+          "attribute": "data.spells",
+          "attributeType": "Spell",
+          "custom": {
+            "map": {
+              "level": "data.level"
+            }
+          },
+          "form": {
+            "title": "Character.Spell",
+            "sections": [
+              {
+                "type": "group",
+                "fields": [
+                  {
+                    "placeholder": "Common.Name",
+                    "attribute": "name"
+                  },
+                  {
+                    "placeholder": "Common.Description",
+                    "type": "textArea",
+                    "attribute": "descr"
+                  }
+                ]
+              },
+              {
+                "title": "Common.Reference",
+                "type": "group",
+                "fields": [
+                  {
+                    "title": "Common.Reference",
+                    "type": "reference",
+                    "attribute": "reference",
+                    "attributeType": "Spell"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+      ]
+    }
+  ]
+}

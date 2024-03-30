@@ -1,0 +1,82 @@
+{
+  "views": [
+    {
+      "type": "hStack",
+      "spacing": 12,
+      "alignment": "center",
+      "views": [
+        {
+          "value": "{{name}}",
+          "style": "title",
+        },
+        {
+          "type": "image",
+          "value": "{{image}}",
+          "width": 60.0,
+          "height": 60.0,
+          "alignment": "top",
+          "imageResizeMode": "aspectFill",
+          "borderWidth": 1,
+          "borderColor": "#ffffff",
+          "link": "{{image}}"
+        },
+      ]
+    },
+    {
+      "type": "hStack",
+      "views": [
+        {
+          "title": "Class",
+          "value": "{{data.classes|join}}",
+          "type": "field",
+        },
+        {
+          "title": "AL",
+          "value": "{{data.alignment|default: 'None'}}",
+          "type": "field",
+          "width": -1,
+        },
+      ]
+    },
+    {
+      "type": "hStack",
+      "views": [
+        {
+          "title": "Title",
+          "value": "{{data.title|default: 'None'}}",
+          "type": "field",
+        },
+        {
+          "title": "Level",
+          "value": "{{data.level}}",
+          "type": "field",
+          "width": -1,
+        }
+      ]
+    },
+    {
+      "type": "hStack",
+      "views": [
+        {
+          "title": "Hit Points",
+          "value": "{{data.hpCurrent|default: 0}} / {{data.hpMaximum|default: 0}}",
+          "link": "/health/",
+          "type": "field",
+          "style": "mini",
+        },
+        {
+          "title": "Armour Class",
+          "value": "{{data.ac|default: 0}}",
+          "type": "field",
+          "style": "mini",
+        },
+        {
+          "title": "Attack Bonus",
+          "value": "{{data.attackBonus|default: 0|signed}}",
+          "type": "field",
+          "style": "mini"
+        }
+      ]
+    },
+  ]
+}

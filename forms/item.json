@@ -1,0 +1,106 @@
+{
+  "title": "Item",
+  "sections": [
+    {
+      "title": "Common.ShortDescription",
+      "type": "group",
+      "fields": [
+        {
+          "type": "textArea",
+          "attribute": "data.shortDescription"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "fields": [
+        {
+          "title": "Common.ItemType",
+          "type": "picker",
+          "attribute": "data.type",
+          "attributeType": "ItemType"
+        },
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Item.GeneralProperties",
+      "fields": [
+        {
+          "title": "Item.Cost",
+          "units": "coins",
+          "type": "decimal",
+          "attribute": "data.cost"
+        },
+        {
+          "title": "Item.Weight",
+          "units": "coins",
+          "type": "decimal",
+          "attribute": "data.weight"
+        }
+      ]
+    },
+    {
+      "title": "Item.ArmourProperties",
+      "type": "group",
+      "visibleIf": "{% if data.type == 'armour' or data.type == 'shield' %}true{% endif %}",
+      "fields": [
+        {
+          "title": "Common.ArmorClass",
+          "type": "number",
+          "attribute": "data.ac"
+        }, 
+        {
+          "title": "Common.AscendingArmor",
+          "type": "number",
+          "attribute": "data.aac"
+        }
+      ]
+    },
+    {
+      "title": "Item.WeaponProperties",
+      "visibleIf": "{% if data.type == 'weapon'%}true{% endif %}",
+      "type": "group",
+      "fields": [
+        {
+          "title": "Item.Qualities",
+          "type": "multiPicker",
+          "attribute": "data.qualities",
+          "attributeType": "WeaponQuality"
+        },
+        {
+          "title": "Common.Damage",
+          "type": "text",
+          "attribute": "data.damage"
+        },
+        {
+          "title": "Item.Range",
+          "units": "ft",
+          "type": "text",
+          "attribute": "data.range",
+          "visibleIf": "{% if 'missile' in data.qualities %}true{% endif %}",
+        },
+      ]
+    },
+    {
+      "title": "Item.OtherProperties",
+      "type": "group",
+      "visibleIf": "{% if data.type == 'adventuringGear' or data.type == 'misc' %}true{% endif %}",
+      "fields": [
+        {
+          "title": "Item.Container",
+          "type": "toggle",
+          "attribute": "data.container",
+        },
+        {
+          "title": "Item.ContainerCapacity",
+          "units": "coins",
+          "placeholder": "Common.Unlimited",
+          "type": "number",
+          "attribute": "data.capacity",
+          "visibleIf": "{{data.container}}",
+        },
+      ]
+    },
+  ]
+}

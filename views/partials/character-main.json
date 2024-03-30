@@ -1,0 +1,219 @@
+{
+  "views": [
+    {
+      "type": "partial",
+      "value": "character-header",
+    },
+    {
+      "type": "grid",
+      "views": [
+        {
+          "type": "gridRow",
+          "views": [
+            {
+              "value": "Ability Scores",
+              "style": "title2"
+            }, 
+            {
+              "value": "Saving Throws",
+              "style": "title2"
+            }, 
+          ]
+        },
+        {
+          "type": "gridRow",
+          "views": [
+            {
+              "title": "Str",
+              "value": "{{data.str.base}} / {{data.str.mod|signed|default: '+0'}}",
+              "type": "field",
+              "style": "small"
+            },
+            {
+              "title": "D",
+              "value": "{{data.saves.death|default: 0}}",
+              "type": "field",
+              "style": "small"
+            }
+          ]
+        },
+        {
+          "type": "gridRow",
+          "views": [
+            {
+              "title": "Int",
+              "value": "{{data.int.base}} / {{data.int.mod|signed|default: '+0'}}",
+              "type": "field",
+              "style": "small"
+            },
+            {
+              "title": "W",
+              "value": "{{data.saves.wands|default: 0}}",
+              "type": "field",
+              "style": "small"
+            }
+          ]
+        },
+        {
+          "type": "gridRow",
+          "views": [
+            {
+              "title": "Wis",
+              "value": "{{data.wis.base}} / {{data.wis.mod|signed|default: '+0'}}",
+              "type": "field",
+              "style": "small"
+            },
+            {
+              "title": "P",
+              "value": "{{data.saves.paralysis|default: 0}}",
+              "type": "field",
+              "style": "small"
+            }
+          ]
+        },
+        {
+          "type": "gridRow",
+          "views": [
+            {
+              "title": "Dex",
+              "value": "{{data.dex.base}} / {{data.dex.mod|signed|default: '+0'}}",
+              "type": "field",
+              "style": "small"
+            },
+            {
+              "title": "B",
+              "value": "{{data.saves.breath|default: 0}}",
+              "type": "field",
+              "style": "small"
+            }
+          ]
+        },
+        {
+          "type": "gridRow",
+          "views": [
+            {
+              "title": "Con",
+              "value": "{{data.con.base}} / {{data.con.mod|signed|default: '+0'}}",
+              "type": "field",
+              "style": "small"
+            },
+            {
+              "title": "S",
+              "value": "{{data.saves.spells|default: 0}}",
+              "type": "field",
+              "style": "small"
+            }
+          ]
+        },
+        {
+          "type": "gridRow",
+          "views": [
+            {
+              "title": "Cha",
+              "value": "{{data.cha.base}} / {{data.cha.mod|signed|default: '+0'}}",
+              "type": "field",
+              "style": "small"
+            }
+          ]
+        },
+      ]
+    },
+    {
+      "type": "hStack",
+      "views": [
+        {
+          "type": "vStack",
+          "spacing": 4,
+          "views": [
+            {
+              "value": "Encounters",
+              "style": "title2",
+            },
+            {
+              "title": "Init",
+              "value": "{{data.initiativeBonus|signed|default: '+0'}}",
+              "type": "field",
+              "style": "small"
+            }, 
+            {
+              "value": "Movement",
+              "style": "title2",
+            },
+            {
+              "title": "Ov",
+              "value": "{{data.movement.ov|default: 'None'}}",
+              "type": "field",
+              "style": "small"
+            }, 
+            {
+              "title": "Ex",
+              "value": "{{data.movement.ex|default: 'None'}}",
+              "type": "field",
+              "style": "small"
+            }, 
+            {
+              "title": "En",
+              "value": "{{data.movement.en|default: 'None'}}",
+              "type": "field",
+              "style": "small"
+            }, 
+          ]
+        },
+        {
+          "type": "vStack",
+          "spacing": 4,
+          "views": [
+            {
+              "value": "Exploration",
+              "style": "title2",
+            },
+            {
+              "title": "LD",
+              "value": "{{data.exploration.ld|default: 1}}-in-6",
+              "type": "field",
+              "style": "small"
+            }, 
+            {
+              "title": "OD",
+              "value": "{{data.exploration.od|default: 1}}-in-6",
+              "type": "field",
+              "style": "small"
+            }, 
+            {
+              "title": "SD",
+              "value": "{{data.exploration.sd|default: 1}}-in-6",
+              "type": "field",
+              "style": "small"
+            },
+            {
+              "title": "FT",
+              "value": "{{data.exploration.ft|default: 1}}-in-6",
+              "type": "field",
+              "style": "small"
+            },  
+          ]
+        },
+      ]
+    },
+    // Abilities
+    {
+      "value": "Abilities",
+      "style": "title2",
+    },
+    {
+      "type": "divider",
+      "padding": [0]
+    },
+    {
+      "type": "list",
+      "attribute": "data.abilities",
+      "divider": true,
+      "views": [
+        {
+          "type": "partial",
+          "value": "character-ability",
+        }      
+      ]
+    }
+  ]
+}

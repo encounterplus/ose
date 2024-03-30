@@ -1,0 +1,61 @@
+{
+  "views": [
+    {
+      "type": "hStack",
+      "alignment": "center",
+      "spacing": 6,
+      "views": [
+        {
+          "type": "image",
+          "value": "{% if definition.imagePath != nil %}{{definition.imagePath|default: 'xmark'}}{% else %}/icons/spell/{{definition.data.school}}.png{% endif %}",
+          "imageResizeMode": "aspectFill",
+          "cornerRadius": 6,
+          "width": 34,
+          "height": 34,
+          "color": "#999",
+        },
+        {
+          "type": "vStack",
+          "link": "{{reference}}",
+          "views": [
+            {
+              "value": "**{{name}}**",
+              "style": "item-title"
+            },
+            {
+              "value": "{{definition.data.level|default: 1|ordinal}} {{'Spell.Level'|l}}{{definition.data.duration|prefix: ' • '}}{{definition.data.range|prefix: ' • '}}",
+              "style": "item-detail"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "attribute": "prepared",
+          "width": 44,
+          "alignment": "center",
+          "custom": {
+            "checkboxStyle": {
+              "default": {
+                "icon": "text.book.closed"
+              },
+              "checked": {
+                "icon": "text.book.closed.fill"
+              }
+            }
+          }
+        },
+        {
+          "type": "button",
+          "title": "CAST",
+          "width": -1,
+          "action": {
+            "event": {
+              "type": "castSpell",
+              "spell": "{{name}}"
+            }
+          }
+        }
+      ]
+    },
+  ]
+}
