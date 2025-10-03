@@ -106,7 +106,6 @@
         },
         {
           "title": "Saves.SaveAsHD",
-          "type": "number",
           "attribute": "data.saves.hd"
         },
       ]

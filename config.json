@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "Default": {
+      "combatant": {
+        "bars": [
+          {
+            "attribute": "data.hp",
+            "title": "Common.HitPoints",
+            "label": "Common.HP",
+            "temporary": false
+          }
+        ]
+      }
+    },
+    "Character": {
+      "role": "friendly",
+      "collection": {
+        "detail": "{{'Common.Level'|l}} {{data.level}}, {{data.classes|join}}"
+      }
+    },
+    "NPC": {
+      "role": "neutral"
+    }
+  }
+}

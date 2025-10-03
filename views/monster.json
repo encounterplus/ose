@@ -61,15 +61,5 @@
       "type": "tags",
       "attribute": "tags"
     }
-  ],
-  "attributes": [
-    {
-      "inCombatDetail": "{{'Common.AC'|l}} {{data.ac}} • {{'Common.HD'|l}} {{data.hd.value}}",
-      "outCombatDetail": "{{'Common.AC'|l}} {{data.ac}} • {{'Common.HD'|l}} {{data.hd.value}}",
-      "data.hd.formula": "{{data.hd.value}}d8{{data.hd.mod|signed}}"
-    }, 
-    {
-      "data.hp": "{% if data.hd.average %}{{data.hd.average}} {{data.hd.formula|brackets}}{% else %}{{data.hd.formula}}{% endif %}"
-    }
   ]
 }

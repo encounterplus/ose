@@ -1,0 +1,29 @@
+{
+  "references": [ "data.items", "data.spells", "data.abilities" ],
+  // define global modifiers
+  "modifiers": [
+    "data.items"
+  ],
+  "attributes": [
+    {
+      "inCombatDetail": "{{'Common.AC'|l}} {{data.ac}} • {{'Common.LV'|l}} {{data.level}}",
+      "outCombatDetail": "{{'Common.AC'|l}} {{data.ac}} • {{'Common.LV'|l}} {{data.level}}",
+      "data.initiativeBonus": "#{% if data.initiativeBonus %}{{data.initiativeBonus}}{% else %}{{data.dex.mod|default: 0}}{% endif %}",
+    },
+    // ITEMS
+    {
+      "data.items": {
+        "attribute": "data.items",
+        "transform": "items"
+      },
+      "data.coins.total": "#({{data.coins.cp|default: 0}} / 100) + ({{data.coins.sp|default: 0}} / 10) + ({{data.coins.ep|default: 0}} / 2) + {{data.coins.gp|default: 0}} + ({{data.coins.pp|default: 0}} * 10)",
+    },
+    // SPELLS
+    {
+      "data.spellbook": {
+        "attribute": "data.spells",
+        "transform": "spellbook"
+      },
+    }
+  ]
+}

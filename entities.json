@@ -6,7 +6,7 @@
       "label": "characters"
     },
     "loadable": true,
-    "role": "friendly"
+    "standalone": true
   },
   {
     "name": "Monster",
@@ -23,8 +23,7 @@
     "collection": {
       "label": "npcs"
     },
-    "loadable": true,
-    "role": "neutral"
+    "loadabe": true
   },
   {
     "name": "Spell",
@@ -39,9 +38,7 @@
     "label": "item",
     "collection": {
       "label": "items"
-    },
-    "loadable": true,
-    "role": "neutral"
+    }
   },
   {
     "name": "Class",
@@ -55,7 +52,6 @@
     "label": "table",
     "collection": {
       "label": "tables"
-    },
-    "native": true
+    }
   }
 ]
